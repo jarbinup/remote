@@ -1,4 +1,5 @@
 import './App.css';
+import { List } from 'antd';
 
 const getAvatar = (users: Array<{ name: string; email: string }>) =>
   users.map(user => ({
@@ -14,15 +15,20 @@ const mockData = getAvatar([
 ]);
 
 const App = () => (
-  <ul>
-    {mockData.map(({ name, avatar, email }) => (
-      <li key={name}>
-        <img src={avatar} width={60} height={60} /> ---
-        <span>{name}</span> ---
-        <span>{email}</span>
-      </li>
-    ))}
-  </ul>
+  <div>
+    <List
+      dataSource={mockData}
+      renderItem={({ name, avatar, email }) => (
+        <List.Item key={name}>
+          <List.Item.Meta
+            avatar={<img alt="avatar" src={avatar} width={60} height={60} />}
+            title={name}
+            description={email}
+          />
+        </List.Item>
+      )}
+    />
+  </div>
 );
 
 export default App;
