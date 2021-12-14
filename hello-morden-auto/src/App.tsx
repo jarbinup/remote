@@ -1,7 +1,9 @@
 import './App.css';
+import 'tailwindcss/base.css';
+import 'tailwindcss/components.css';
+import 'tailwindcss/utilities.css';
 import { List } from 'antd';
-import LaddaButton, { S, SLIDE_UP } from 'react-ladda';
-import 'ladda/dist/ladda.min.css';
+import Item from './components/Item';
 
 const getAvatar = (users: Array<{ name: string; email: string }>) =>
   users.map(user => ({
@@ -17,31 +19,10 @@ const mockData = getAvatar([
 ]);
 
 const App = () => (
-  <div>
+  <div className="container lg mx-auto">
     <List
       dataSource={mockData}
-      renderItem={({ name, avatar, email }) => (
-        <List.Item
-          key={name}
-          actions={[
-            <LaddaButton
-              key={email}
-              loading={false}
-              data-size={S}
-              data-style={SLIDE_UP}
-              data-spinner-size={20}
-              data-spinner-color="#ddd"
-              data-spinner-lines={8}>
-              Call
-            </LaddaButton>,
-          ]}>
-          <List.Item.Meta
-            avatar={<img alt="avatar" src={avatar} width={60} height={60} />}
-            title={name}
-            description={email}
-          />
-        </List.Item>
-      )}
+      renderItem={info => <Item key={info.name} info={info} />}
     />
   </div>
 );
