@@ -10,16 +10,20 @@ specifiers:
   '@types/react-dom': ^17.0.11
   antd: ^4.17.3
   del-cli: ^4.0.1
+  ladda: ^2.0.3
   react: ^17.0.1
   react-dom: ^17.0.1
+  react-ladda: ^6.0.0
   typescript: ^4.5.4
 
 dependencies:
   '@modern-js/plugin-less': 1.1.1_typescript@4.5.4
   '@modern-js/runtime': 1.1.1_3e110919350e0ee2e64d1a654bd03c09
   antd: 4.17.3_react-dom@17.0.2+react@17.0.2
+  ladda: 2.0.3
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-ladda: 6.0.0_react-dom@17.0.2+react@17.0.2
 
 devDependencies:
   '@modern-js/app-tools': 1.1.4_b6e8374966de429fb31cc39444331b2d
@@ -7290,6 +7294,18 @@ packages:
     resolution: {integrity: sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==}
     engines: {node: '>= 8'}
 
+  /ladda/1.0.6:
+    resolution: {integrity: sha512-wY2Dj1ulZSQSZcFmpT96DuuuLjdj5qIMcIaH/oSWPyd240I9MI/1JxZ0tQSC81pl1Xa9cJNUUeAGNWcKbKZ70g==}
+    dependencies:
+      spin.js: 2.3.2
+    dev: false
+
+  /ladda/2.0.3:
+    resolution: {integrity: sha512-b/m5BP2M2s37GkwEMBJV6mnvLsFUUo1pdn13n6x18bPEFFf+zEl5TmeeqYXmUjgkEEugICe+dTvmciteJ+CGcQ==}
+    dependencies:
+      spin.js: 4.1.1
+    dev: false
+
   /launch-editor/2.2.1:
     resolution: {integrity: sha512-On+V7K2uZK6wK7x691ycSUbLD/FyKKelArkbaAMSSJU8JmqmhwN2+mnJDNINuJWSrh2L0kDk+ZQtbC/gOWUwLw==}
     dependencies:
@@ -9627,6 +9643,18 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
+  /react-ladda/6.0.0_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-wBs0nebPF+t2lXBCrBLT98FiNDoUY73CtOHHvcEZ7mCpnmfwjWUhGI44xIG+UAnyFgshIP58IPO5yy9Sk3uqqA==}
+    peerDependencies:
+      react: ^16.0.0
+      react-dom: ^16.0.0
+    dependencies:
+      ladda: 1.0.6
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
   /react-refresh/0.9.0:
     resolution: {integrity: sha512-Gvzk7OZpiqKSkxsQvO/mbTN1poglhmAV7gR/DdIrRrSMXraRQQlfikRJOr3Nb9GTMPC5kof948Zy6jJZIFtDvQ==}
     engines: {node: '>=0.10.0'}
@@ -10329,6 +10357,14 @@ packages:
       debug: 4.1.1
       is2: 2.0.1
     dev: true
+
+  /spin.js/2.3.2:
+    resolution: {integrity: sha1-bKpW1SBnNFD9XPvGlx5tB3LDeho=}
+    dev: false
+
+  /spin.js/4.1.1:
+    resolution: {integrity: sha512-3cjbjZBw8TmZmvzcmlXqArUpefJ1vGgQZ+dh1CdyDyxZZNxNmw+2Dq5jyoP/OCqQP+z78rWgSJX9m3uMuGaxxw==}
+    dev: false
 
   /split/1.0.1:
     resolution: {integrity: sha512-mTyOoPbrivtXnwnIxZRFYRrPNtEFKlpB2fvjSnCQUiAA6qAZzqwna5envK4uk6OIeP17CsdF3rSBGYVBsU0Tkg==}
