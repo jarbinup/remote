@@ -1,7 +1,8 @@
-import './App.css';
 import 'tailwindcss/base.css';
 import 'tailwindcss/components.css';
 import 'tailwindcss/utilities.css';
+import './App.css';
+import './styles/utils.css';
 import { List } from 'antd';
 import Item from './components/Item';
 
